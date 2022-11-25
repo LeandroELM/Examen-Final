@@ -684,7 +684,7 @@ public class TestHotel {
 							
 						}
 				
-					
+						sc.close();
 			}	
 				
 			

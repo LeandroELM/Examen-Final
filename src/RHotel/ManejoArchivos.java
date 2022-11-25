@@ -3,6 +3,8 @@ import java.io.*;
 public class ManejoArchivos {
 File archivo;
 	
+		
+	
 	protected void creaArchivo() {
 		
 		archivo=new File("Archivo.txt");
@@ -52,6 +54,25 @@ File archivo;
 			System.out.println("Se escribio en el archivo");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace(System.out);
+		}
+		
+		
+		class escribiendo{
+			public void escribir() {
+				String frase="Prueba de escritura";
+				
+				try {
+					FileWriter escritura=new FileWriter("C:Users/Usuario/Desktop/texto_nuevo.txt");
+					for(int i=0;i<frase.length();i++) {
+						escritura.write(frase.charAt(i));}
+					escritura.close();
+				} catch (IOException e) {
+					
+					e.printStackTrace();
+				}
+				
+			}
+			
 		}
 	}
 }
